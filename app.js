@@ -232,8 +232,7 @@ app.put('/todos/:todoId/', checkRequestsBody, async (request, response) => {
       ;`
     await db.run(putTodoWithQuerystatus)
     response.send('Status Updated')
-  }
-  else if (priority !== undefined) {
+  } else if (priority !== undefined) {
     const putTodoWithQuerypriority = `
       UPDATE todo 
       SET priority='${priority}'
@@ -241,8 +240,7 @@ app.put('/todos/:todoId/', checkRequestsBody, async (request, response) => {
       ;`
     await db.run(putTodoWithQuerypriority)
     response.send('Priority Updated')
-  }
-  else if (todo !== undefined) {
+  } else if (todo !== undefined) {
     const putTodoWithQueryTodo = `
       UPDATE todo 
       SET todo='${todo}'
@@ -250,8 +248,7 @@ app.put('/todos/:todoId/', checkRequestsBody, async (request, response) => {
       ;`
     await db.run(putTodoWithQueryTodo)
     response.send('Todo Updated')
-  }
-  else if (category !== undefined) {
+  } else if (category !== undefined) {
     const putTodoWithQuerycategory = `
       UPDATE todo 
       SET category='${category}'
@@ -259,8 +256,7 @@ app.put('/todos/:todoId/', checkRequestsBody, async (request, response) => {
       ;`
     await db.run(putTodoWithQuerycategory)
     response.send('Category Updated')
-  }
-  else if (dueDate !== undefined) {
+  } else if (dueDate !== undefined) {
     const putTodoWithQueryduedate = `
       UPDATE todo 
       SET due_date='${dueDate}'
